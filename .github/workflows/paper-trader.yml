@@ -1,0 +1,32 @@
+name: GHOST AI Trader - Paper Only
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: ghost-ai-paper
+  cancel-in-progress: false
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Paper simulation only (no exchange credentials)
+        run: python trader.py
+      - name: Persist simulation history
+        run: |
+          if ! git diff --quiet -- data/; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add data/state.json data/operations.jsonl
+            git commit -m 'Save paper trading state [skip ci]'
+            git push
+          fi
