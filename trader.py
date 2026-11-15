@@ -10,7 +10,7 @@ ROOT = pathlib.Path(__file__).resolve().parent
 STATE = ROOT / 'data' / 'state.json'
 LOG = ROOT / 'data' / 'operations.jsonl'
 SYMBOL = os.environ.get('SYMBOL', 'BTCUSDT')
-URL = f'https://api.binance.com/api/v3/klines?symbol={SYMBOL}&interval=5m&limit=120'
+URL = f'https://data-api.binance.vision/api/v3/klines?symbol={SYMBOL}&interval=5m&limit=120'
 
 
 def sma(v, n):
