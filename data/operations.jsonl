@@ -1,1 +1,2 @@
 {"at": "2026-11-15T19:43:41.029519+00:00", "symbol": "BTCUSDT", "candle_id": 1794771599999, "price": 64937.46, "votes": {"trend": "BUY", "momentum": "BUY", "breakout": "WAIT", "volume": "WAIT"}, "consensus": "WAIT", "action": "HOLD", "equity": 1000.0, "halted": false}
+{"at": "2026-11-15T23:32:21.556100+00:00", "symbol": "BTCUSDT", "candle_id": 1794785399999, "price": 65124.78, "votes": {"trend": "BUY", "momentum": "WAIT", "breakout": "WAIT", "volume": "WAIT"}, "consensus": "WAIT", "action": "HOLD", "equity": 1000.0, "halted": false}
