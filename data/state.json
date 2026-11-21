@@ -1,10 +1,10 @@
 {
   "cash": 1000.0,
   "asset": 0.0,
-  "last_candle": 1795215299999,
+  "last_candle": 1795232999999,
   "entry": null,
   "peak_equity": 1000.0,
-  "last_run": "2026-11-20T22:59:52.209680+00:00",
-  "last_price": 59150.55,
+  "last_run": "2026-11-21T03:53:56.504908+00:00",
+  "last_price": 57024.5,
   "equity": 1000.0
 }
